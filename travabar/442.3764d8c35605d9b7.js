@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktravabar=self.webpackChunktravabar||[]).push([[442],{7442:(m,u,a)=>{a.r(u),a.d(u,{AdminModule:()=>l});var o=a(9808),d=a(5e3);let l=(()=>{class n{}return n.\u0275fac=function(t){return new(t||n)},n.\u0275mod=d.oAB({type:n}),n.\u0275inj=d.cJS({imports:[[o.ez]]}),n})()}}]);
