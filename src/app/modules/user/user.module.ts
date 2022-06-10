@@ -4,6 +4,7 @@ import { UserComponent } from './user/user.component';
 import { UserRoutingModule } from "./user-routing.module";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatIconModule } from "@angular/material/icon";
+import { ClipsMultiSelectModule } from "../../components/chips-multi-select/clips-multi-select.module";
 
 
 
@@ -11,12 +12,13 @@ import { MatIconModule } from "@angular/material/icon";
   declarations: [
     UserComponent,
   ],
-  imports: [
-    CommonModule,
-    UserRoutingModule,
-    MatTabsModule,
-    MatIconModule,
-  ],
+    imports: [
+        CommonModule,
+        UserRoutingModule,
+        MatTabsModule,
+        MatIconModule,
+        ClipsMultiSelectModule,
+    ],
   bootstrap: [UserComponent],
 })
 export class UserModule { }
