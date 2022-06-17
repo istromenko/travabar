@@ -19,7 +19,6 @@ import { MatChipsModule } from "@angular/material/chips";
     MatToolbarModule,
     MatIconModule,
     MatChipsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]
