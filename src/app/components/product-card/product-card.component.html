@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-5">
+      <img alt="img" [src]="product.imageLink"/>
+    </div>
+    <div class="col-sm-7 d-flex flex-column">
+      <div class="d-flex header">
+        <h2>{{product.name}}</h2>
+        <h2 style="color: purple">{{product.price}}₴</h2>
+      </div>
+      <div class="d-flex">
+        <h4>
+          состав: {{product.compound}}
+        </h4>
+      </div>
+    </div>
+  </div>
+</div>
