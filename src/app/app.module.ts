@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatChipsModule } from "@angular/material/chips";
-import { ClipsMultiSelectModule } from "./components/chips-multi-select/clips-multi-select.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import { ClipsMultiSelectModule } from "./components/chips-multi-select/clips-mu
     MatIconModule,
     MatChipsModule,
 
-    ClipsMultiSelectModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
