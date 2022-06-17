@@ -4,14 +4,14 @@
       <mat-icon color="primary">restaurant</mat-icon>
       Food
     </ng-template>
-    <app-product-content></app-product-content>
+    <app-product-content [products]="foodList"></app-product-content>
   </mat-tab>
   <mat-tab>
     <ng-template  mat-tab-label>
       <mat-icon color="primary">local_drink</mat-icon>
       Drinks
     </ng-template>
-    <app-product-content></app-product-content>
+    <app-product-content [products]="drinkList"></app-product-content>
   </mat-tab>
   <mat-tab>
     <ng-template  mat-tab-label>
