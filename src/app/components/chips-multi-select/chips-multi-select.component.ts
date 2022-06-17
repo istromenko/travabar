@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Input, OnDestroy, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, Input, OnDestroy, Output, ViewChild } from '@angular/core';
 import { MatChip, MatChipList } from "@angular/material/chips";
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 import { map, Subscription } from "rxjs";
@@ -18,26 +18,28 @@ import { map, Subscription } from "rxjs";
 export class ChipsMultiSelectComponent implements AfterViewInit, ControlValueAccessor, OnDestroy {
   @Input() options: string[] = [];
   @ViewChild(MatChipList) chipList!: MatChipList;
-  value: string[] = [];
+  @Input() selectedOptions: string[] = [];
+  @Output() selectedOptionsChange = new EventEmitter<string[]>();
   disabled = false;
   onChange!: (value: string[]) => void;
 
   private subscribes = new Subscription();
 
   ngAfterViewInit() {
-    this.selectChips(this.value);
+    this.selectChips(this.selectedOptions);
 
     this.subscribes.add(this.chipList.chipSelectionChanges
       .pipe(
         map((event) => event.source))
       .subscribe((chip) => {
         if (chip.selected) {
-          this.value = [...this.value, chip.value];
+          this.selectedOptions = [...this.selectedOptions, chip.value];
         } else {
-          this.value = this.value.filter((o) => o !== chip.value);
+          this.selectedOptions = this.selectedOptions.filter((o) => o !== chip.value);
         }
 
-        this.propagateChange(this.value);
+        this.propagateChange(this.selectedOptions);
+        this.selectedOptionsChange.emit(this.selectedOptions);
       }));
   }
 
@@ -71,7 +73,7 @@ export class ChipsMultiSelectComponent implements AfterViewInit, ControlValueAcc
     if (this.chipList && value) {
       this.selectChips(value);
     } else if (value) {
-      this.value = value;
+      this.selectedOptions = value;
     }
   }
 

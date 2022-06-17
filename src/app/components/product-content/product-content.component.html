@@ -1,8 +1,11 @@
-<app-chips-multi-select class="m-2" [options]="tags">
+<app-chips-multi-select class="m-2" [options]="tags" [(selectedOptions)]="selectedTags">
 </app-chips-multi-select>
 <div class="container">
   <div class="row">
-    <app-product-card *ngFor="let product in products" class="col-sm-5"></app-product-card>
-
+    <app-product-card *ngFor="let product of products"
+                      class="col-sm-5"
+                      [class.d-none]="isDisplayNone(product.tags, selectedTags)"
+                      [product]="product">
+    </app-product-card>
   </div>
 </div>

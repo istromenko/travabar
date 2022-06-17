@@ -17,8 +17,16 @@ export class ProductContentComponent {
     return this._products;
   }
   tags: string[] = [];
+  selectedTags: string[] = [];
 
   private _products: Product[] = []
+
+  isDisplayNone(tags: string, displayTags: string[]): boolean {
+    if(!displayTags || !displayTags.length) {
+      return false;
+    }
+    return displayTags.some(searchTag => !tags.toLocaleLowerCase().includes(searchTag))
+  }
 
   constructor() { }
 
