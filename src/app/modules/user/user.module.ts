@@ -4,8 +4,7 @@ import { UserComponent } from './user/user.component';
 import { UserRoutingModule } from "./user-routing.module";
 import { MatTabsModule } from "@angular/material/tabs";
 import { MatIconModule } from "@angular/material/icon";
-import { ClipsMultiSelectModule } from "../../components/chips-multi-select/clips-multi-select.module";
-import { ProductCardModule } from "../../components/product-card/product-card.module";
+import { ProductContentModule } from "../../components/product-content/product-content.module";
 
 
 @NgModule({
@@ -17,9 +16,8 @@ import { ProductCardModule } from "../../components/product-card/product-card.mo
     UserRoutingModule,
     MatTabsModule,
     MatIconModule,
-    ClipsMultiSelectModule,
-    ProductCardModule,
 
+    ProductContentModule,
   ],
   bootstrap: [UserComponent],
 })

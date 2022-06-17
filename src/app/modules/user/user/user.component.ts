@@ -6,12 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent implements OnInit {
-  options: string[] = [
-    'fat',
-    'helcy',
-    'samovar',
-  ]
-
   constructor() { }
 
   ngOnInit(): void {

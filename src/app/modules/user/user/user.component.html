@@ -4,40 +4,28 @@
       <mat-icon color="primary">restaurant</mat-icon>
       Food
     </ng-template>
-    <app-chips-multi-select class="m-2" [options]="options">
-    </app-chips-multi-select>
-    <div class="container">
-      <div class="row">
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-        <app-product-card class="col-sm-5"></app-product-card>
-
-      </div>
-    </div>
+    <app-product-content></app-product-content>
   </mat-tab>
   <mat-tab>
     <ng-template  mat-tab-label>
       <mat-icon color="primary">local_drink</mat-icon>
       Drinks
     </ng-template>
+    <app-product-content></app-product-content>
   </mat-tab>
   <mat-tab>
     <ng-template  mat-tab-label>
       <mat-icon color="primary" >graphic_eq</mat-icon>
       Hookan
     </ng-template>
+    <app-product-content></app-product-content>
   </mat-tab>
   <mat-tab>
     <ng-template  mat-tab-label>
       <mat-icon color="primary">videogame_asset</mat-icon>
       Games
     </ng-template>
+    <app-product-content></app-product-content>
   </mat-tab>
 
 </mat-tab-group>
